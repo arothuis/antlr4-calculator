@@ -9,6 +9,10 @@ ANTLR4 calculator example and explanation
  based on the grammar, you can let Maven execute the
  antlr4:antlr4 command
 
+# How to start?
+Run the main.java function and start typing your calculations.
+Leave the calculation blank or type `exit` to exit the program.
+
 # What is going on?
 ANTLR4 generates Parser, Visitor and Listener
 classes based on the `Calculator.g4` grammar
@@ -27,7 +31,7 @@ in a certain expression.
 # How does the Visitor work?
 The Visitor visits each node in the given parse tree.
 This principle is based on the
-[visitor pattern][https://refactoring.guru/design-patterns/visitor].
+[visitor pattern](https://refactoring.guru/design-patterns/visitor).
 
 If the node is an expression, it tries to evaluate the expression
 until terminals (in this grammar: *numbers*) are found.
