@@ -66,4 +66,4 @@ No further configuration required.
 # Author
 Alex Rothuis: [@arothuis](https://twitter.com/arothuis)
 
-[arothuis.nl](arothuis.nl)
+[arothuis.nl](http://arothuis.nl)
