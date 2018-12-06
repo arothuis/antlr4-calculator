@@ -1,14 +1,12 @@
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.ParseTreeWalker;
-import parser.CalculationListener;
 import parser.CalculatorLexer;
 import parser.CalculatorParser;
 import parser.CalculationVisitor;
 
 import java.util.Scanner;
 
-public class Main {
+public class VisitorMain {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
@@ -25,14 +23,8 @@ public class Main {
             CalculatorParser parser = new CalculatorParser(tokens);
             ParseTree tree = parser.start();
 
-//            CalculationVisitor calculator = new CalculationVisitor();
-//            Double result = calculator.visit(tree);
-
-            CalculationListener calculator = new CalculationListener();
-            ParseTreeWalker walker = new ParseTreeWalker();
-            walker.walk(calculator, tree);
-
-            Double result = calculator.getResult();
+            CalculationVisitor calculator = new CalculationVisitor();
+            Double result = calculator.visit(tree);
 
             System.out.println(result);
         }
