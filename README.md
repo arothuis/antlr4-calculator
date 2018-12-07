@@ -2,6 +2,7 @@
 ANTLR4 calculator example and explanation
 
 # How do I set this up?
+* The project uses Java 11, but you can change this in `pom.xml` if need be
 * Install packages using Maven (see `pom.xml`)
 * This automatically generates
  the required classes through ANTLR4
