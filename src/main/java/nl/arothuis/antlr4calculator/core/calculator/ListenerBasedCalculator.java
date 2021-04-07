@@ -1,8 +1,8 @@
-package nl.arothuis.core.calculator;
+package nl.arothuis.antlr4calculator.core.calculator;
 
-import nl.arothuis.core.parser.CalculationListener;
-import nl.arothuis.core.parser.CalculatorLexer;
-import nl.arothuis.core.parser.CalculatorParser;
+import nl.arothuis.antlr4calculator.core.parser.CalculationListener;
+import nl.arothuis.antlr4calculator.core.parser.CalculatorLexer;
+import nl.arothuis.antlr4calculator.core.parser.CalculatorParser;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;

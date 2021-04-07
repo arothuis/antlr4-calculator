@@ -1,6 +1,6 @@
-package nl.arothuis.infrastructure.driver;
+package nl.arothuis.antlr4calculator.infrastructure.driver;
 
-import nl.arothuis.core.calculator.Calculator;
+import nl.arothuis.antlr4calculator.core.calculator.Calculator;
 
 import java.io.InputStream;
 import java.util.Scanner;

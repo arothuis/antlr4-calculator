@@ -1,7 +1,7 @@
-package nl.arothuis;
+package nl.arothuis.antlr4calculator;
 
-import nl.arothuis.core.calculator.ListenerBasedCalculator;
-import nl.arothuis.infrastructure.driver.Repl;
+import nl.arothuis.antlr4calculator.core.calculator.ListenerBasedCalculator;
+import nl.arothuis.antlr4calculator.infrastructure.driver.Repl;
 
 public class ListenerMain {
     public static void main(String[] args) {
