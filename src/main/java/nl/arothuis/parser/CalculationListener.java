@@ -1,4 +1,4 @@
-package parser;
+package nl.arothuis.parser;
 
 import java.util.Stack;
 

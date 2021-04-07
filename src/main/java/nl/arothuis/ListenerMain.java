@@ -1,12 +1,14 @@
+package nl.arothuis;
+
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.ParseTreeWalker;
-import parser.CalculationListener;
-import parser.CalculatorLexer;
-import parser.CalculatorParser;
+import nl.arothuis.parser.CalculationListener;
+import nl.arothuis.parser.CalculatorLexer;
+import nl.arothuis.parser.CalculatorParser;
 
 import java.util.Scanner;
 

@@ -1,8 +1,10 @@
+package nl.arothuis;
+
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.ParseTree;
-import parser.CalculatorLexer;
-import parser.CalculatorParser;
-import parser.CalculationVisitor;
+import nl.arothuis.parser.CalculatorLexer;
+import nl.arothuis.parser.CalculatorParser;
+import nl.arothuis.parser.CalculationVisitor;
 
 import java.util.Scanner;
 
