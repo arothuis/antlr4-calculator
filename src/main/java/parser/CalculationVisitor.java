@@ -36,35 +36,21 @@ public class CalculationVisitor extends CalculatorBaseVisitor<Double> {
         return Math.pow(this.visit(ctx.left), this.visit(ctx.right));
     }
 
-    /**
-     * @return Double
-     */
     @Override
-    public Double visitMultiplication(CalculatorParser.MultiplicationContext ctx) {
-        return this.visit(ctx.left) * this.visit(ctx.right);
-    }
+    public Double visitMultiplicationOrDivision(CalculatorParser.MultiplicationOrDivisionContext ctx) {
+        if (ctx.operator.getText().equals("*")) {
+            return this.visit(ctx.left) * this.visit(ctx.right);
+        }
 
-    /**
-     * @return Double
-     */
-    @Override
-    public Double visitDivision(CalculatorParser.DivisionContext ctx) {
         return this.visit(ctx.left) / this.visit(ctx.right);
     }
 
-    /**
-     * @return Double
-     */
     @Override
-    public Double visitAddition(CalculatorParser.AdditionContext ctx) {
-        return this.visit(ctx.left) + this.visit(ctx.right);
-    }
+    public Double visitAdditionOrSubtraction(CalculatorParser.AdditionOrSubtractionContext ctx) {
+        if (ctx.operator.getText().equals("+")) {
+            return this.visit(ctx.left) + this.visit(ctx.right);
+        }
 
-    /**
-     * @return Double
-     */
-    @Override
-    public Double visitSubtraction(CalculatorParser.SubtractionContext ctx) {
         return this.visit(ctx.left) - this.visit(ctx.right);
     }
 }

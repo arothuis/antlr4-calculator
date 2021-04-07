@@ -14,7 +14,7 @@ public class CalculationListener extends CalculatorBaseListener {
      * works via Last In First Out,
      * the right number should be "popped" off first.
      */
-    private Stack<Double> stack = new Stack<>();
+    private final Stack<Double> stack = new Stack<>();
 
     @Override
     public void exitNumber(CalculatorParser.NumberContext ctx) {
@@ -31,35 +31,27 @@ public class CalculationListener extends CalculatorBaseListener {
     }
 
     @Override
-    public void exitMultiplication(CalculatorParser.MultiplicationContext ctx) {
+    public void exitMultiplicationOrDivision(CalculatorParser.MultiplicationOrDivisionContext ctx) {
         Double right = this.stack.pop();
         Double left = this.stack.pop();
 
-        this.stack.push(left * right);
+        if (ctx.operator.getText().equals("*")) {
+            this.stack.push(left * right);
+        } else {
+            this.stack.push(left / right);
+        }
     }
 
     @Override
-    public void exitDivision(CalculatorParser.DivisionContext ctx) {
+    public void exitAdditionOrSubtraction(CalculatorParser.AdditionOrSubtractionContext ctx) {
         Double right = this.stack.pop();
         Double left = this.stack.pop();
 
-        this.stack.push(left / right);
-    }
-
-    @Override
-    public void exitAddition(CalculatorParser.AdditionContext ctx) {
-        Double right = this.stack.pop();
-        Double left = this.stack.pop();
-
-        this.stack.push(left + right);
-    }
-
-    @Override
-    public void exitSubtraction(CalculatorParser.SubtractionContext ctx) {
-        Double right = this.stack.pop();
-        Double left = this.stack.pop();
-
-        this.stack.push(left - right);
+        if (ctx.operator.getText().equals("+")) {
+            this.stack.push(left + right);
+        } else {
+            this.stack.push(left - right);
+        }
     }
 
     /**

@@ -23,6 +23,10 @@ start : expression;
  * Here, numbers are dealt with first, then parentheses
  * and so on.
  *
+ * Multiplication and division are on the
+ * same precedence level, so they are grouped.
+ * The same goes for addition and subtraction.
+ *
  * Labels (e.g. "# Parentheses") are added to each rule
  * to provide context to which rule is being parsed.
  * This is can be used in a Listener or Visitor
@@ -35,11 +39,9 @@ start : expression;
  * allowing for even more fine-grained control.
  */
 expression
-   : NUMBER                                         # Number
-   | '(' inner=expression ')'                       # Parentheses
-   | left=expression operator=POW right=expression  # Power
-   | left=expression operator=MUL right=expression  # Multiplication
-   | left=expression operator=DIV right=expression  # Division
-   | left=expression operator=ADD right=expression  # Addition
-   | left=expression operator=SUB right=expression  # Subtraction
+   : NUMBER                                               # Number
+   | '(' inner=expression ')'                             # Parentheses
+   | left=expression operator=POW right=expression        # Power
+   | left=expression operator=(MUL|DIV) right=expression  # MultiplicationOrDivision
+   | left=expression operator=(ADD|SUB) right=expression  # AdditionOrSubtraction
    ;
