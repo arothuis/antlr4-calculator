@@ -1,16 +1,15 @@
-package nl.arothuis.calculator;
+package nl.arothuis.core.calculator;
 
-import nl.arothuis.parser.CalculationListener;
-import nl.arothuis.parser.CalculatorLexer;
-import nl.arothuis.parser.CalculatorParser;
+import nl.arothuis.core.parser.CalculationVisitor;
+import nl.arothuis.core.parser.CalculatorLexer;
+import nl.arothuis.core.parser.CalculatorParser;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.tree.ParseTree;
-import org.antlr.v4.runtime.tree.ParseTreeWalker;
 
-public class ListenerBasedCalculator implements Calculator {
+public class VisitorBasedCalculator implements Calculator {
     @Override
     public Double calculate(String input) {
         CharStream chars = CharStreams.fromString(input);
@@ -21,10 +20,7 @@ public class ListenerBasedCalculator implements Calculator {
         CalculatorParser parser = new CalculatorParser(tokens);
         ParseTree tree = parser.start();
 
-        CalculationListener calculator = new CalculationListener();
-        ParseTreeWalker walker = new ParseTreeWalker();
-        walker.walk(calculator, tree);
-
-        return calculator.getResult();
+        CalculationVisitor calculator = new CalculationVisitor();
+        return calculator.visit(tree);
     }
 }

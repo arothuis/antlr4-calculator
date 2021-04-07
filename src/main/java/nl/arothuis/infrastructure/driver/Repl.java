@@ -1,18 +1,21 @@
-package nl.arothuis;
+package nl.arothuis.infrastructure.driver;
 
-import nl.arothuis.calculator.Calculator;
+import nl.arothuis.core.calculator.Calculator;
 
+import java.io.InputStream;
 import java.util.Scanner;
 
 public class Repl {
+    private final InputStream input;
     private final Calculator calculator;
 
-    public Repl(Calculator calculator) {
+    public Repl(InputStream input, Calculator calculator) {
+        this.input = input;
         this.calculator = calculator;
     }
 
-    void start() {
-        Scanner in = new Scanner(System.in);
+    public void start() {
+        Scanner in = new Scanner(input);
 
         while (true) {
             System.out.print("Calculate: ");

@@ -1,4 +1,4 @@
-package nl.arothuis.parser;
+package nl.arothuis.core.parser;
 
 public class CalculationVisitor extends CalculatorBaseVisitor<Double> {
     /**

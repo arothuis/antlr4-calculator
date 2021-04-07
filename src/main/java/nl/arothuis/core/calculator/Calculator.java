@@ -1,4 +1,4 @@
-package nl.arothuis.calculator;
+package nl.arothuis.core.calculator;
 
 public interface Calculator {
     Double calculate(String input);
