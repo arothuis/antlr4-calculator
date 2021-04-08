@@ -1,6 +1,9 @@
 # ANTLR4 Calculator Example
 ANTLR4 calculator example and explanation
 
+![line coverage](.github/badges/jacoco.svg) 
+![branch coverage](.github/badges/branches.svg)
+
 # How do I set this up?
 * The project uses Java 11, but you can change this in `pom.xml` if need be
 * Install packages using Maven (see `pom.xml`)
