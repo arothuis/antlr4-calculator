@@ -8,17 +8,18 @@ ANTLR4 calculator example and explanation
  the required classes through ANTLR4
 * For manually updating/regenerating the required classes
  based on the grammar, you can let Maven execute the
- antlr4:antlr4 command
+ `antlr4:antlr4` command
+* The generated classes are found under `target/generated-sources`.
 
 # How to start?
-Run the `ListenerMain.main()` or `VisitorMain.main()`  
+Run the `nl.arothuis.antlr4calculator.ListenerMain.main()` or `nl.arothuis.antlr4calculator.VisitorMain.main()`  
 and start typing your calculations.
 Leave the calculation blank or type `exit` to exit the program.
 
 # What is going on?
 ANTLR4 generates Parser, Visitor and Listener
 classes based on the `Calculator.g4` grammar
-found in `src/main/antlr4/parser`.
+found in `src/main/antlr4/nl.arothuis.antlr4calculator.core.parser`.
 These classes contain context and methods needed
 for visiting the nodes in the parse tree or
 for listening to events when entering or exiting
@@ -81,9 +82,9 @@ in the target directory. You can use the
 maven commands defined in the `pom.xml`.
 
 The generated classes are output to the `target/generated-sources/antlr4` directory
-and reside in the project's `parser` package.
+and reside in the project's `nl.arothuis.antlr4calculator.core.parser` package.
 This is due to the standard configuration of ANTLR4,
-matching the location of the grammar file (`src/antlr4/parser`).
+matching the location of the grammar file (`src/antlr4/nl.arothuis.antlr4calculator.core.parser`).
 No further configuration required.
 
 # Author
