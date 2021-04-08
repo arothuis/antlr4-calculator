@@ -31,3 +31,10 @@ jobs:
 
       - name: Build and test
         run: mvn -B verify
+        
+      - name: Generate coverage badge
+        uses: cicirello/jacoco-badge-generator@v2.0.1
+        with:
+          generate-coverage-badge: true
+          generate-branches-badge: true
+        
