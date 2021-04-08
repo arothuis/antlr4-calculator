@@ -15,8 +15,7 @@ class ReplTest {
     @Test
     @DisplayName("evaluate input, print result, end with exit")
     void readEvaluatePrintExit() throws IOException {
-        var input =
-                "1 + 2\n" + "exit\n";
+        var input = "1 + 2\n" + "exit\n";
 
         var reader = new StringReader(input);
         var calculator = Mockito.mock(Calculator.class);
