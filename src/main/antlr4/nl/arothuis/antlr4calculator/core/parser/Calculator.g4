@@ -8,7 +8,7 @@ MUL: '*';
 DIV: '/';
 ADD: '+';
 SUB: '-';
-NUMBER: [0-9]+;
+NUMBER: '-'?[0-9]+;
 WHITESPACE: [ \r\n\t]+ -> skip;
 
 /*
