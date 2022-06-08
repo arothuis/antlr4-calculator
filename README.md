@@ -13,6 +13,9 @@ ANTLR4 calculator example and explanation
  based on the grammar, you can let Maven execute the
  `antlr4:antlr4` command
 * The generated classes are found under `target/generated-sources`.
+* Make sure your IDE includes the generated-sources in its imports.
+    * In IntelliJ IDEA, you can right-click the project folder at the top of the project tab (in our case `antlr4-calculator`)
+      and then click `Maven > Generate Sources and Update Folders`
 
 # How to start?
 Run the `nl.arothuis.antlr4calculator.ListenerMain.main()` or `nl.arothuis.antlr4calculator.VisitorMain.main()`  
