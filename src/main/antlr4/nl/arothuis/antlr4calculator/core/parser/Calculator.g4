@@ -2,6 +2,13 @@ grammar Calculator;
 
 /*
  * Tokens (terminal)
+ *
+ * Terminals are basic symbols that cannot
+ * be broken down into smaller parts.
+ * They're stated in generic terms as
+ * their meaning can depend on the context
+ * in which they're used, for example:
+ * MINUS is used for subtraction, but also for negation.
  */
 POW: '^';
 MUL: '*';
@@ -13,6 +20,13 @@ WHITESPACE: [ \r\n\t]+ -> skip;
 
 /*
  * Production Rules (non-terminal)
+ *
+ * Production rules define how the various components
+ * of a language's grammar can be combined to form
+ * valid expressions or statements.
+ * Non-terminals are used in the production rules
+ * to indicate the structure of the language's expressions or statements,
+ * and to specify how the tokens and other symbols can be combined.
  */
 start : expression;
 
