@@ -13,6 +13,11 @@ public class CalculationVisitor extends CalculatorBaseVisitor<Double> {
         return Double.parseDouble(ctx.NUMBER().getText());
     }
 
+    @Override
+    public Double visitNegation(CalculatorParser.NegationContext ctx) {
+        return -1 * this.visit(ctx.right);
+    }
+
     /**
      * Parentheses are used to give precedence to
      * the expression around which they are wrapped.
