@@ -23,6 +23,12 @@ public class CalculationListener extends CalculatorBaseListener {
     }
 
     @Override
+    public void exitNegation(CalculatorParser.NegationContext ctx) {
+        Double right = this.stack.pop();
+        this.stack.push(-1 * right);
+    }
+
+    @Override
     public void exitPower(CalculatorParser.PowerContext ctx) {
         Double right = this.stack.pop();
         Double left = this.stack.pop();

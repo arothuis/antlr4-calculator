@@ -8,7 +8,7 @@ MUL: '*';
 DIV: '/';
 ADD: '+';
 SUB: '-';
-NUMBER: '-'?[0-9]+;
+NUMBER: [0-9]+;
 WHITESPACE: [ \r\n\t]+ -> skip;
 
 /*
@@ -40,6 +40,7 @@ start : expression;
  */
 expression
    : NUMBER                                               # Number
+   | '-' right=expression                                 # Negation
    | '(' inner=expression ')'                             # Parentheses
    | left=expression operator=POW right=expression        # Power
    | left=expression operator=(MUL|DIV) right=expression  # MultiplicationOrDivision
