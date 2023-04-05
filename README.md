@@ -16,6 +16,7 @@ ANTLR4 calculator example and explanation
 * Make sure your IDE includes the generated-sources in its imports.
     * In IntelliJ IDEA, you can right-click the project folder at the top of the project tab (in our case `antlr4-calculator`)
       and then click `Maven > Generate Sources and Update Folders`
+* If you're working on your own DSL, you probably want to use a [plug-in for your IDE or another tool](https://www.antlr.org/tools.html)
 
 # How to start?
 Run the `nl.arothuis.antlr4calculator.ListenerMain.main()` or `nl.arothuis.antlr4calculator.VisitorMain.main()`  
