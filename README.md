@@ -91,7 +91,8 @@ maven commands defined in the `pom.xml`.
 The generated classes are output to the `target/generated-sources/antlr4` directory
 and reside in the project's `nl.arothuis.antlr4calculator.core.parser` package.
 This is due to the standard configuration of ANTLR4,
-matching the location of the grammar file (`src/antlr4/nl.arothuis.antlr4calculator.core.parser`).
+matching the location of the grammar file 
+(`src/antlr4/nl.arothuis.antlr4calculator.core.parser`).
 No further configuration required.
 
 # Author
