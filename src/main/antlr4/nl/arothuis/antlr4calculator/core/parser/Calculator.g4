@@ -29,7 +29,7 @@ start : expression;
  *
  * Labels (e.g. "# Parentheses") are added to each rule
  * to provide context to which rule is being parsed.
- * This is can be used in a Listener or Visitor
+ * This can be used in a Listener or Visitor
  * to allow for separate control over Listener or Visitor actions.
  *
  * Likewise, inner labels (e.g. "left=expression")
