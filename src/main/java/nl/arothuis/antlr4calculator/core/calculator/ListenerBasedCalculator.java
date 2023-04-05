@@ -1,6 +1,6 @@
 package nl.arothuis.antlr4calculator.core.calculator;
 
-import nl.arothuis.antlr4calculator.core.parser.CalculationListener;
+import nl.arothuis.antlr4calculator.core.evaluator.CalculationListener;
 import nl.arothuis.antlr4calculator.core.parser.CalculatorLexer;
 import nl.arothuis.antlr4calculator.core.parser.CalculatorParser;
 import org.antlr.v4.runtime.CharStream;
